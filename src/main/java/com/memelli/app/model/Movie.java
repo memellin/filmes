@@ -13,22 +13,25 @@ public class Movie {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
-    @Column(name = "movie_year")
-    private Integer year;
+ //   @Column(name = "movie_year")  year é palavra reservada do banco de dados
+    private Integer movieYear;
     private String filmMaker;
     private String genre;
     private String imgUrl;
+    @Column(columnDefinition = "TEXT")
     private String shortDescription;
+
+    @Column(columnDefinition = "TEXT")
     private String longDescription;
 
     public Movie() {
 
     }
 
-    public Movie(Long id, String title,Integer year, String filmMaker, String genre, String imgUrl, String shortDescription, String longDescription) {
+    public Movie(Long id, String title,Integer movieYear, String filmMaker, String genre, String imgUrl, String shortDescription, String longDescription) {
         this.id = id;
         this.title = title;
-        this.year = year;
+        this.movieYear = movieYear;
         this.filmMaker = filmMaker;
         this.genre = genre;
         this.imgUrl = imgUrl;
@@ -53,11 +56,11 @@ public class Movie {
     }
 
     public Integer getYear() {
-        return year;
+        return movieYear;
     }
 
-    public void setYear(Integer year) {
-        this.year = year;
+    public void setYear(Integer movieYear) {
+        this.movieYear = movieYear;
     }
 
     public String getFilmMaker() {
