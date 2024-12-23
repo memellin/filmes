@@ -1,9 +1,7 @@
 package com.memelli.app.dto;
 
 import com.memelli.app.model.MovieList;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+
 
 public class MovieListDTO {
     private Long id;

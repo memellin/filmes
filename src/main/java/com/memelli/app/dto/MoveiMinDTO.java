@@ -1,6 +1,7 @@
 package com.memelli.app.dto;
 
 import com.memelli.app.model.Movie;
+import com.memelli.app.projections.MovieMinProjection;
 
 public class MoveiMinDTO {
 
@@ -22,6 +23,15 @@ public class MoveiMinDTO {
         filmMaker = movie.getFilmMaker();
         imgUrl = movie.getImgUrl();
         shortDescription = movie.getShortDescription();
+    }
+
+    public MoveiMinDTO(MovieMinProjection projection) {
+        id = projection.getId();
+        title = projection.getTitle();
+        movieYear = projection.getYear();
+        filmMaker = projection.getFilmMaker();
+        imgUrl = projection.getImgUrl();
+        shortDescription = projection.getShortDescription();
     }
 
 

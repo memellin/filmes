@@ -26,7 +26,8 @@ public class MovieController {
 
     @GetMapping
     public List<MoveiMinDTO> findAll(){
-        return movieService.findAll();
+        List<MoveiMinDTO> list = movieService.findAll();
+        return list;
     }
 
 }
